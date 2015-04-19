@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name="account" type="Account" />
+    <force:recordEdit aura:id="edit" recordId="{!v.account.Id}"/>
+    <ui:button label="Save" press="{!c.save}"/>
+</aura:component>

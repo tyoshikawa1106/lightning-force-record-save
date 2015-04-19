@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="account" type="Account" />
+    <aura:attribute name="index" type="Integer" />
+    <tr>
+        <td class="indexCol">{!v.index}</td>
+        <td>{!v.account.Name}</td>
+        <td>{!v.account.AccountNumber}</td>
+        <td class="btnCol">
+            <ui:button label="Edit" press="{!c.doEdit}" />
+        </td>
+    </tr>
+</aura:component>

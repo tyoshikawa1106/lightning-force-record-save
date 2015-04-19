@@ -1,0 +1,21 @@
+<aura:component controller="ForceRecordSaveDemoController" implements="force:appHostable">
+    <aura:attribute name="accounts" type="Account[]" />
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <div id="aura-page">
+        <table cellpadding="0" cellspacing="0" class="accountTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Account Number</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.accounts}" var="item" indexVar="index">
+                    <c:LightningForceRecordSaveItem account="{!item}" index="{!index + 1}" />
+                </aura:iteration>
+            </tbody>
+        </table>
+    </div>
+</aura:component>
